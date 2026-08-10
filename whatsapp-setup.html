@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect WhatsApp — Swadeshii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Outfit", sans-serif;
+      background: #fbf7f0;
+      color: #1a1a18;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 16px 48px rgba(26,26,24,.1);
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    p { color: #5c574f; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+    .status.waiting { background: #fef3c7; color: #92400e; }
+    .status.qr { background: #dbeafe; color: #1e40af; }
+    .status.ready { background: #d1fae5; color: #065f46; }
+    .status.error { background: #fee2e2; color: #991b1b; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+    #qrBox {
+      background: #f0e8d8;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      min-height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #qrBox img { width: 240px; height: 240px; border-radius: 8px; }
+    .steps { text-align: left; font-size: 0.88rem; color: #5c574f; }
+    .steps li { margin-bottom: 0.5rem; margin-left: 1.2rem; }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background: #2d5a3d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 100px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    .btn:hover { background: #3d7a52; }
+    .error-box {
+      background: #fee2e2;
+      color: #991b1b;
+      padding: 1rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+    code { background: #f0e8d8; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Connect WhatsApp</h1>
+    <p>Link your WhatsApp (9286313130) to receive orders and reply to customers.</p>
+
+    <div class="status waiting" id="statusBadge">
+      <span class="dot"></span>
+      <span id="statusText">Checking server...</span>
+    </div>
+
+    <div id="errorBox" class="error-box" hidden></div>
+
+    <div id="qrBox">
+      <p id="qrPlaceholder">Waiting for QR code...</p>
+    </div>
+
+    <ol class="steps">
+      <li>Make sure the server is running: <code>npm start</code> in the <code>server</code> folder</li>
+      <li>Open WhatsApp on your phone</li>
+      <li>Go to <strong>Settings → Linked Devices → Link a Device</strong></li>
+      <li>Scan the QR code above</li>
+    </ol>
+
+    <button class="btn" id="retryBtn" hidden>Retry Connection</button>
+    <a href="/" class="btn" id="homeBtn" hidden>Go to Website</a>
+  </div>
+
+  <script>
+    const API = "";
+
+    async function poll() {
+      try {
+        const res = await fetch(`${API}/api/whatsapp/status`);
+        const data = await res.json();
+        const badge = document.getElementById("statusBadge");
+        const text = document.getElementById("statusText");
+        const errorBox = document.getElementById("errorBox");
+        const qrBox = document.getElementById("qrBox");
+        const homeBtn = document.getElementById("homeBtn");
+        const retryBtn = document.getElementById("retryBtn");
+
+        errorBox.hidden = true;
+        retryBtn.hidden = true;
+
+        if (data.connected) {
+          badge.className = "status ready";
+          text.textContent = "WhatsApp connected!";
+          qrBox.innerHTML = "<p style='font-size:3rem'>✅</p>";
+          homeBtn.hidden = false;
+          return;
+        }
+
+        if (data.status === "error") {
+          badge.className = "status error";
+          text.textContent = "Connection error";
+          errorBox.hidden = false;
+          errorBox.innerHTML = `<strong>Error:</strong> ${data.error || "Unknown error"}<br><br>
+            <strong>Fix:</strong> Install <a href="https://www.google.com/chrome/">Google Chrome</a>, 
+            close any old server window, then run <code>npm start</code> again in the server folder.`;
+          retryBtn.hidden = false;
+          qrBox.innerHTML = "<p>Could not start WhatsApp</p>";
+          return;
+        }
+
+        if (data.hasQr) {
+          badge.className = "status qr";
+          text.textContent = "Scan QR code now";
+          const qrRes = await fetch(`${API}/api/whatsapp/qr`);
+          if (qrRes.ok) {
+            const qrData = await qrRes.json();
+            qrBox.innerHTML = `<img src="${qrData.qr}" alt="WhatsApp QR code" />`;
+          }
+        } else {
+          badge.className = "status waiting";
+          text.textContent = data.status === "initializing" ? "Starting WhatsApp..." : "Waiting for QR...";
+          qrBox.innerHTML = "<p id='qrPlaceholder'>Generating QR code...</p>";
+        }
+      } catch {
+        document.getElementById("statusBadge").className = "status error";
+        document.getElementById("statusText").textContent = "Server not running";
+        document.getElementById("errorBox").hidden = false;
+        document.getElementById("errorBox").innerHTML =
+          `<strong>Server is not running.</strong><br><br>
+          Open PowerShell and run:<br>
+          <code>cd server</code><br>
+          <code>npm start</code><br><br>
+          Then refresh this page.`;
+        document.getElementById("qrBox").innerHTML = "<p>Start the server first</p>";
+      }
+    }
+
+    document.getElementById("retryBtn").addEventListener("click", async () => {
+      await fetch(`${API}/api/whatsapp/retry`, { method: "POST" });
+      poll();
+    });
+
+    poll();
+    setInterval(poll, 3000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Swadeshii — Home-cooked Indian meals delivered in 30 minutes. Made with raw, natural ingredients from our kitchen to your table." />
+  <title>Swadeshii — Home-Cooked Food, Delivered in 30 Minutes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">Swadeshii</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#promise">Our Promise</a></li>
+        <li><a href="#order" class="nav-cta">Order Now</a></li>
+      </ul>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        🛒 Cart
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="marquee-banner" aria-hidden="true">
+    <div class="marquee-track">
+      <span>🌿 100% Raw & Natural Ingredients</span>
+      <span>⚡ 30-Minute Delivery Guarantee</span>
+      <span>👩‍🍳 Home-Cooked With Love</span>
+      <span>🏠 From Our Kitchen to Your Table</span>
+      <span>🌾 Farm-Fresh, Zero Preservatives</span>
+      <span>🌿 100% Raw & Natural Ingredients</span>
+      <span>⚡ 30-Minute Delivery Guarantee</span>
+      <span>👩‍🍳 Home-Cooked With Love</span>
+      <span>🏠 From Our Kitchen to Your Table</span>
+      <span>🌾 Farm-Fresh, Zero Preservatives</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <div class="hero-gradient"></div>
+        <div class="hero-pattern"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge animate-in">
+          <span class="pulse-dot"></span>
+          30-Minute Delivery Guarantee
+        </div>
+        <h1 class="hero-title animate-in delay-1">
+          Taste the warmth of<br />
+          <em>home-cooked</em> India
+        </h1>
+        <p class="hero-subtitle animate-in delay-2">
+          Every dish at Swadeshii is prepared fresh in our kitchen using raw, natural ingredients —
+          just like your grandmother's recipes. No shortcuts. No preservatives. Pure swadeshi goodness.
+        </p>
+        <div class="hero-actions animate-in delay-3">
+          <a href="#menu" class="btn btn-primary">Explore Menu</a>
+          <a href="#order" class="btn btn-secondary">
+            <span class="btn-icon">⚡</span> Order in 30 Min
+          </a>
+        </div>
+        <div class="hero-stats animate-in delay-4">
+          <div class="stat">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Happy Families</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Natural Ingredients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">30</span>
+            <span class="stat-label">Min Delivery</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual animate-in delay-2">
+        <div class="hero-plate">
+          <div class="plate-glow"></div>
+          <div class="plate-content">
+            <span class="plate-emoji">🍛</span>
+            <div class="steam steam-1"></div>
+            <div class="steam steam-2"></div>
+            <div class="steam steam-3"></div>
+          </div>
+        </div>
+        <div class="floating-card card-1">
+          <span>🥬</span> Farm Fresh
+        </div>
+        <div class="floating-card card-2">
+          <span>🏠</span> Home Style
+        </div>
+        <div class="floating-card card-3">
+          <span>⏱️</span> 30 Min
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Story</span>
+          <h2 class="section-title">Cooking with heart,<br />serving with soul</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">🌾</div>
+            <h3>Raw & Natural</h3>
+            <p>We source ingredients directly from local farms. Every grain, every vegetable, every spice — untouched by artificial processing.</p>
+          </div>
+          <div class="about-card featured">
+            <div class="about-icon">👩‍🍳</div>
+            <h3>Home-Cooked Recipes</h3>
+            <p>Our chefs cook the way your mother does — slow, patient, and with love. Traditional recipes passed down through generations.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🚫</div>
+            <h3>Zero Compromise</h3>
+            <p>No MSG, no artificial colors, no frozen shortcuts. What you eat is what we would serve our own families at the dinner table.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="menu section" id="menu">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">Our Menu</span>
+          <h2 class="section-title">A feast of authentic flavors</h2>
+          <p class="section-desc">Handcrafted daily with seasonal, natural ingredients. Prices include our 30-minute delivery promise.</p>
+        </div>
+
+        <div class="menu-filters" id="menuFilters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="breakfast">Breakfast</button>
+          <button class="filter-btn" data-filter="mains">Mains</button>
+          <button class="filter-btn" data-filter="breads">Breads & Rice</button>
+          <button class="filter-btn" data-filter="snacks">Snacks</button>
+          <button class="filter-btn" data-filter="beverages">Beverages</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+          <!-- Breakfast -->
+          <article class="menu-item" data-category="breakfast">
+            <div class="menu-item-image" style="--emoji: '🥣'">
+              <span class="menu-emoji">🥣</span>
+              <span class="menu-badge">Bestseller</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Poha with Peanuts</h3>
+                <span class="menu-price">₹89</span>
+              </div>
+              <p class="menu-desc">Flattened rice tempered with mustard seeds, curry leaves, and roasted peanuts. A Maharashtrian morning classic.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Light</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="breakfast">
+            <div class="menu-item-image" style="--emoji: '🫓'">
+              <span class="menu-emoji">🫓</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Stuffed Paratha Combo</h3>
+                <span class="menu-price">₹129</span>
+              </div>
+              <p class="menu-desc">Aloo or gobi paratha with fresh curd, homemade pickle, and white butter. Rolled by hand every morning.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Hearty</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="breakfast">
+            <div class="menu-item-image" style="--emoji: '🍳'">
+              <span class="menu-emoji">🍳</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Masala Dosa</h3>
+                <span class="menu-price">₹109</span>
+              </div>
+              <p class="menu-desc">Crispy fermented rice crepe filled with spiced potato masala. Served with coconut chutney and sambar.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">South Indian</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="breakfast">
+            <div class="menu-item-image" style="--emoji: '🥞'">
+              <span class="menu-emoji">🥞</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Chole Bhature</h3>
+                <span class="menu-price">₹149</span>
+              </div>
+              <p class="menu-desc">Fluffy deep-fried bread with spiced chickpea curry. A Delhi street-food favorite, made the home way.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Punjabi</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mains -->
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🍛'">
+              <span class="menu-emoji">🍛</span>
+              <span class="menu-badge">Chef's Pick</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Dal Tadka Thali</h3>
+                <span class="menu-price">₹199</span>
+              </div>
+              <p class="menu-desc">Yellow dal tempered with ghee, jeera, and garlic. Comes with rice, roti, sabzi, salad, and papad.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Complete Meal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🍗'">
+              <span class="menu-emoji">🍗</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Homestyle Chicken Curry</h3>
+                <span class="menu-price">₹249</span>
+              </div>
+              <p class="menu-desc">Slow-cooked in onion-tomato masala with whole spices. Tender, aromatic, and deeply comforting.</p>
+              <div class="menu-tags">
+                <span class="tag">Non-Veg</span>
+                <span class="tag">Spicy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🥘'">
+              <span class="menu-emoji">🥘</span>
+              <span class="menu-badge">Bestseller</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Paneer Butter Masala</h3>
+                <span class="menu-price">₹219</span>
+              </div>
+              <p class="menu-desc">Cottage cheese cubes in a rich, creamy tomato gravy. Made with fresh malai and kasuri methi.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Creamy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🐟'">
+              <span class="menu-emoji">🐟</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Fish Curry (Bengali Style)</h3>
+                <span class="menu-price">₹279</span>
+              </div>
+              <p class="menu-desc">Rohu fish in mustard-turmeric gravy. A coastal classic with the warmth of a Bengali kitchen.</p>
+              <div class="menu-tags">
+                <span class="tag">Non-Veg</span>
+                <span class="tag">Mustard</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🍲'">
+              <span class="menu-emoji">🍲</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Rajma Chawal</h3>
+                <span class="menu-price">₹169</span>
+              </div>
+              <p class="menu-desc">Kidney beans simmered overnight in masala, served over steamed basmati rice. Sunday lunch, every day.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Comfort Food</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="mains">
+            <div class="menu-item-image" style="--emoji: '🥗'">
+              <span class="menu-emoji">🥗</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Palak Paneer</h3>
+                <span class="menu-price">₹199</span>
+              </div>
+              <p class="menu-desc">Fresh spinach purée with soft paneer cubes. Iron-rich, wholesome, and gently spiced.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Healthy</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Breads & Rice -->
+          <article class="menu-item" data-category="breads">
+            <div class="menu-item-image" style="--emoji: '🫓'">
+              <span class="menu-emoji">🫓</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Assorted Rotis (4 pcs)</h3>
+                <span class="menu-price">₹49</span>
+              </div>
+              <p class="menu-desc">Whole wheat rotis rolled fresh on the tawa. Soft, warm, and perfect with any curry.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="breads">
+            <div class="menu-item-image" style="--emoji: '🍚'">
+              <span class="menu-emoji">🍚</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Jeera Rice</h3>
+                <span class="menu-price">₹79</span>
+              </div>
+              <p class="menu-desc">Basmati rice tempered with cumin seeds and ghee. Fragrant and fluffy every single time.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="breads">
+            <div class="menu-item-image" style="--emoji: '🧅'">
+              <span class="menu-emoji">🧅</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Garlic Naan (2 pcs)</h3>
+                <span class="menu-price">₹69</span>
+              </div>
+              <p class="menu-desc">Tandoor-baked naan brushed with garlic butter. Crispy edges, soft center.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Snacks -->
+          <article class="menu-item" data-category="snacks">
+            <div class="menu-item-image" style="--emoji: '🥟'">
+              <span class="menu-emoji">🥟</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Samosa (2 pcs)</h3>
+                <span class="menu-price">₹49</span>
+              </div>
+              <p class="menu-desc">Crispy pastry filled with spiced potato and peas. Served with mint chutney.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Snack</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="snacks">
+            <div class="menu-item-image" style="--emoji: '🍢'">
+              <span class="menu-emoji">🍢</span>
+              <span class="menu-badge">Popular</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Paneer Tikka</h3>
+                <span class="menu-price">₹179</span>
+              </div>
+              <p class="menu-desc">Marinated cottage cheese grilled to perfection. Smoky, charred, and irresistible.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Grilled</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="snacks">
+            <div class="menu-item-image" style="--emoji: '🥙'">
+              <span class="menu-emoji">🥙</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Bhel Puri</h3>
+                <span class="menu-price">₹69</span>
+              </div>
+              <p class="menu-desc">Puffed rice, chutneys, onions, and sev tossed together. Mumbai's favorite chaat, made fresh.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Street Food</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="snacks">
+            <div class="menu-item-image" style="--emoji: '🧆'">
+              <span class="menu-emoji">🧆</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Dhokla</h3>
+                <span class="menu-price">₹89</span>
+              </div>
+              <p class="menu-desc">Steamed gram flour cakes tempered with mustard seeds. Light, spongy, and guilt-free.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Gujarati</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Beverages -->
+          <article class="menu-item" data-category="beverages">
+            <div class="menu-item-image" style="--emoji: '🥤'">
+              <span class="menu-emoji">🥤</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Fresh Mango Lassi</h3>
+                <span class="menu-price">₹79</span>
+              </div>
+              <p class="menu-desc">Alphonso mango blended with thick curd and a touch of cardamom. Summer in a glass.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Seasonal</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="beverages">
+            <div class="menu-item-image" style="--emoji: '☕'">
+              <span class="menu-emoji">☕</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Masala Chai</h3>
+                <span class="menu-price">₹39</span>
+              </div>
+              <p class="menu-desc">Assam tea boiled with ginger, cardamom, and cloves. The way chai should be — kadak and warming.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Hot</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="beverages">
+            <div class="menu-item-image" style="--emoji: '🧃'">
+              <span class="menu-emoji">🧃</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Nimbu Pani</h3>
+                <span class="menu-price">₹49</span>
+              </div>
+              <p class="menu-desc">Fresh lemon juice with rock salt, cumin, and mint. Nature's electrolyte drink.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+                <span class="tag">Refreshing</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-item" data-category="beverages">
+            <div class="menu-item-image" style="--emoji: '🥛'">
+              <span class="menu-emoji">🥛</span>
+            </div>
+            <div class="menu-item-body">
+              <div class="menu-item-header">
+                <h3>Sweet Lassi</h3>
+                <span class="menu-price">₹59</span>
+              </div>
+              <p class="menu-desc">Thick, creamy yogurt drink sweetened with raw sugar. The perfect meal companion.</p>
+              <div class="menu-tags">
+                <span class="tag">Veg</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promise -->
+    <section class="promise section" id="promise">
+      <div class="container">
+        <div class="promise-card">
+          <div class="promise-content">
+            <span class="section-tag light">Our Promise</span>
+            <h2 class="section-title light">30 minutes.<br />Or your meal is free.</h2>
+            <p>We know hunger doesn't wait. That's why every Swadeshii order is prepared fresh and dispatched within minutes. If we're late, you don't pay — it's that simple.</p>
+            <ul class="promise-list">
+              <li>
+                <span class="check">✓</span>
+                Freshly cooked after you order — never reheated
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Only raw, natural ingredients in every dish
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Eco-friendly packaging, delivered hot
+              </li>
+              <li>
+                <span class="check">✓</span>
+                Real-time tracking from kitchen to doorstep
+              </li>
+            </ul>
+          </div>
+          <div class="promise-visual">
+            <div class="timer-ring">
+              <svg viewBox="0 0 120 120" class="timer-svg">
+                <circle cx="60" cy="60" r="54" class="timer-bg" />
+                <circle cx="60" cy="60" r="54" class="timer-progress" />
+              </svg>
+              <div class="timer-text">
+                <span class="timer-number" id="timerNumber">30</span>
+                <span class="timer-label">minutes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials section">
+      <div class="container">
+        <div class="section-header center">
+          <span class="section-tag">Love Letters</span>
+          <h2 class="section-title">What our families say</h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"The dal tadka tastes exactly like my mother's. I order every week — it's the only food delivery I trust for my kids."</p>
+            <footer>
+              <span class="testimonial-avatar">P</span>
+              <div>
+                <cite>Priya Sharma</cite>
+                <span>Mumbai</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial featured">
+            <div class="stars">★★★★★</div>
+            <p>"30-minute delivery isn't a gimmick — they actually arrive in 25! And the paneer butter masala? Restaurant quality, home-kitchen soul."</p>
+            <footer>
+              <span class="testimonial-avatar">R</span>
+              <div>
+                <cite>Rahul Mehta</cite>
+                <span>Delhi</span>
+              </div>
+            </footer>
+          </blockquote>
+          <blockquote class="testimonial">
+            <div class="stars">★★★★★</div>
+            <p>"Finally, a service that doesn't use frozen parathas. You can taste the difference in every bite. Swadeshii is a blessing."</p>
+            <footer>
+              <span class="testimonial-avatar">A</span>
+              <div>
+                <cite>Ananya Reddy</cite>
+                <span>Hyderabad</span>
+              </div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order CTA -->
+    <section class="order section" id="order">
+      <div class="container">
+        <div class="order-card">
+          <h2>Hungry? Let's fix that.</h2>
+          <p>Order now and get home-cooked goodness at your doorstep in 30 minutes.</p>
+          <form class="order-form" id="orderForm">
+            <div class="order-summary" id="orderSummary">
+              <div class="order-summary-empty">🛒 Add items from the menu above</div>
+            </div>
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your name" required aria-label="Your name" />
+              <input type="tel" name="phone" placeholder="Phone number" required aria-label="Phone number" pattern="[0-9+\s-]{10,}" />
+            </div>
+            <input type="text" name="address" placeholder="Delivery address" required aria-label="Delivery address" class="form-full" />
+            <textarea name="notes" placeholder="Special instructions (optional)" rows="2" class="form-full" aria-label="Special instructions"></textarea>
+            <div class="payment-box">
+              <div class="payment-box-header">
+                <span class="payment-icon">💳</span>
+                <div>
+                  <h4>Pay via UPI</h4>
+                  <p>Scan or pay using any UPI app</p>
+                </div>
+              </div>
+              <div class="upi-row">
+                <code class="upi-id" id="upiDisplay">9286313130@fam</code>
+                <button type="button" class="btn-copy" id="copyUpi">Copy</button>
+              </div>
+              <div class="upi-amount-row">
+                <span>Amount to pay</span>
+                <strong id="upiAmount">—</strong>
+              </div>
+              <a href="#" class="btn btn-secondary btn-upi" id="upiPayLink">Open UPI App & Pay</a>
+            </div>
+            <button type="submit" class="btn btn-primary btn-large">
+              Place Order — Delivered in 30 Min ⚡
+            </button>
+          </form>
+          <p class="order-note">Or call us directly: <a href="tel:+919286313130">+91 92863 13130</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">Swadeshii</span>
+        </a>
+        <p>Home-cooked Indian meals, made with raw natural ingredients and delivered with love in 30 minutes.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#promise">Delivery Promise</a></li>
+          <li><a href="#order">Order Now</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon – Fri: 7 AM – 11 PM</li>
+          <li>Sat – Sun: 8 AM – 11 PM</li>
+          <li>Kitchen closes at 10:30 PM</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="tel:+919286313130">+91 92863 13130</a></li>
+          <li><a href="https://wa.me/919286313130" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="upi://pay?pa=9286313130@fam&pn=Swadeshii&cu=INR">UPI: 9286313130@fam</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>&copy; 2026 Swadeshii. Made with 🌿 and love.</p>
+    </div>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotalAmount">₹0</span>
+      </div>
+      <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Success Modal -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal modal-wide">
+      <div class="modal-icon">🎉</div>
+      <h3>Order Placed!</h3>
+      <p>Your order was sent to Swadeshii on WhatsApp. Track live updates below.</p>
+      <div class="modal-order-id" id="modalOrderId">SWD-00000</div>
+      <p>Estimated delivery by <strong id="modalEta">--:--</strong></p>
+      <div class="modal-chat" id="modalChat"></div>
+      <button class="btn btn-primary" id="modalClose">Got it!</button>
+    </div>
+  </div>
+
+  <!-- Live Order Chat (floating) -->
+  <button class="chat-fab" id="chatFab" aria-label="Open order chat" hidden>
+    💬
+    <span class="chat-fab-badge" id="chatFabBadge"></span>
+  </button>
+
+  <aside class="order-chat" id="orderChat" aria-label="Order chat" hidden>
+    <div class="chat-header">
+      <div>
+        <h3>Order Updates</h3>
+        <span class="chat-order-id" id="chatOrderId"></span>
+      </div>
+      <div class="chat-header-actions">
+        <span class="chat-status" id="chatStatus" title="Connection status"></span>
+        <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+      </div>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <form class="chat-input-form" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Ask about your order..." autocomplete="off" />
+      <button type="submit" class="chat-send" aria-label="Send message">➤</button>
+    </form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
